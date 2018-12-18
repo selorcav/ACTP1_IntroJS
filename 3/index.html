@@ -11,56 +11,94 @@
 
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1> Hey !! </h1>
-    <section class="section-1">
-      <h1> Hey </h1>
-      <span class="counter"> 101 </span>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-    </section>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    .red{
+      color: red;
+    }
+    .gray{
+      background-color: gray;
+      transition: 1s;
+    }
+  </style>
 
-    <table>
-      <tbody>
-        <tr class="row" id="row-1">
-          <td> 1 </td>
-          <td> 1 </td>
-          <td> 1 </td>
-        </tr>
+</head>
+<body>
+  <h1> Hey !! </h1>
 
-        <tr class="row" id="row-2">
-          <td> 2 </td>
-          <td> 2 </td>
-          <td> 2 </td>
-        </tr>
+  <section class="section-1">
+    <h1> Hey </h1>
 
-        <tr class="row" id="row-3">
-          <td> 3 </td>
-          <td> 3 </td>
-          <td> 3 </td>
-        </tr>
+    <span class="counter"> 101 </span>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  </section>
 
-        <tr class="row" id="row-4">
-          <td> 4 </td>
-          <td> 4 </td>
-          <td> 4 </td>
-        </tr>
+  <table>
+    <tbody>
+      <tr class="row" id="row-1">
+        <td> 1 </td>
+        <td> 1 </td>
+        <td> 1 </td>
+      </tr>
 
-      </tbody>
-    </table>
+      <tr class="row" id="row-2">
+        <td> 2 </td>
+        <td> 2 </td>
+        <td> 2 </td>
+      </tr>
 
-    <form class="" action="index.html" method="post">
-      <fieldset>
-        <label for="email"> Email: </label>
-        <input type="text" name="email" value="x@xyz.com">
+      <tr class="row" id="row-3">
+        <td> 3 </td>
+        <td> 3 </td>
+        <td> 3 </td>
+      </tr>
 
-        <label for="name"> Name: </label>
-        <input type="text" name="name" value="x@xyz.com">
+      <tr class="row" id="row-4">
+        <td> 4 </td>
+        <td> 4 </td>
+        <td> 4 </td>
+      </tr>
 
-      </fieldset>
-    </form>
-  </body>
+    </tbody>
+  </table>
+
+  <form class="" action="index.html" method="post">
+    <fieldset>
+      <label for="email"> Email: </label>
+      <input type="text" name="email" value="x@xyz.com">
+
+      <label for="name"> Name: </label>
+      <input type="text" name="name" value="x@xyz.com">
+
+    </fieldset>
+  </form>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $("h1").addClass("red")
+      $(".section-1").css("background-color","yellow");
+
+      function sumar(){
+        var counter = $(".counter").text();
+        counter = parseInt(counter);
+        counter = counter + 10;
+        $(".counter").text(counter)
+      };
+      sumar();
+
+      $("#row-3").on("click", function(){
+        $("#row-3").addClass("gray");
+      })
+
+      $(".section-1 h1").css("font-size","4em")
+
+      $("tr:last-child").css("background-color","red");
+
+
+    </script>
+</body>
 </html>
